@@ -8,7 +8,54 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+/* Master CSS
+-------------------------------------------------- */
+$color1: rgb(88,214,17); /* green */
+$color2: rgb(1,63,52); /* purple */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container{
+    max-width: 1000px;
+}
+
+.tree{
+    display: flex;
+    justify-content: space-around; 
+}
+
+.root{
+    display: flex;
+	justify-content: space-start; 
+	border: 1px solid $color2;
+	flex-direction: column;
+}
+
+.branch{
+    display: flex;
+    justify-content: space-around; 
+	border: 1px solid $color2;
+}
+
+.leaf{
+    display: flex;
+    justify-content: space-around; 
+	border: 1px solid $color1; 
+}
+
+.type{
+	width:100px;
+	height:50px;
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	background-color: #555;
+	cursor: pointer;
 }
