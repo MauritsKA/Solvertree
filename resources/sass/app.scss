@@ -10,8 +10,8 @@
 
 /* Master CSS
 -------------------------------------------------- */
-$color1: rgb(88,214,17); /* green */
-$color2: rgb(1,63,52); /* purple */
+$color1: rgb(137,198,77); /* green */
+$color2: rgb(62,112,61); /* purple */
 
 html {
   position: relative;
@@ -20,34 +20,72 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color:white;
 }
 
 .container{
     max-width: 1000px;
 }
 
+.cover{
+    min-height: 100vh;
+    background: url("http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/4p/mt/p04pmtxf.jpg") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}   
+
+.coveroverlay{
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(85,85,85,0);
+    position: absolute;
+    top: 0; left: 0; 
+    display: flex;               
+    align-items: center;   
+} 
+
+.titlebox{
+ 	display: flex;
+	min-height: 30vh;
+	color:white;
+	justify-content: center; 
+	align-items:center;
+} 
+
+.treebox{
+ 	display: flex;
+	min-height: 70vh;
+	justify-content: center; 
+	align-items:flex-start;
+}
+
+
+/* Tree CSS
+-------------------------------------------------- */
+
 .tree{
     display: flex;
     justify-content: space-around; 
+    align-items:flex-start;
+    
 }
 
 .root{
     display: flex;
 	justify-content: space-start; 
-	border: 1px solid $color2;
 	flex-direction: column;
 }
 
 .branch{
     display: flex;
     justify-content: space-around; 
-	border: 1px solid $color2;
 }
 
 .leaf{
     display: flex;
     justify-content: space-around; 
-	border: 1px solid $color1; 
+    padding:10px;
 }
 
 .type{
@@ -56,6 +94,10 @@ body {
 	display: flex;
 	align-items: center; 
 	justify-content: center; 
-	background-color: #555;
+	background-color: white;
 	cursor: pointer;
+	border-radius: 10px;
+	color:$color2;
+	border: 1px solid $color2;
 }
+

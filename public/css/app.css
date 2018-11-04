@@ -9507,18 +9507,74 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: white;
 }
 
 .container {
   max-width: 1000px;
 }
 
+.cover {
+  min-height: 100vh;
+  background: url("http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/4p/mt/p04pmtxf.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.coveroverlay {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: rgba(85, 85, 85, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.titlebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 30vh;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.treebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 70vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* Tree CSS
+-------------------------------------------------- */
 .tree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .root {
@@ -9528,7 +9584,6 @@ body {
   -webkit-box-pack: space-start;
       -ms-flex-pack: space-start;
           justify-content: space-start;
-  border: 1px solid #013f34;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -9541,7 +9596,6 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px solid #013f34;
 }
 
 .leaf {
@@ -9550,7 +9604,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px solid #58d611;
+  padding: 10px;
 }
 
 .type {
@@ -9565,6 +9619,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #555;
+  background-color: white;
   cursor: pointer;
+  border-radius: 10px;
+  color: #3e703d;
+  border: 1px solid #3e703d;
 }
